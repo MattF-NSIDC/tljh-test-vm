@@ -1,0 +1,9 @@
+forge "https://forgeapi.puppetlabs.com"
+
+mod "nsidc/nsidc_miniconda",
+  :git => "git@bitbucket.org:/nsidc/puppet-nsidc-miniconda.git",
+  :ref => "support-new-miniconda"
+
+mod 'puppetlabs-docker', '4.1.2'
+
+mod 'puppetlabs-vcsrepo', '5.0.0'

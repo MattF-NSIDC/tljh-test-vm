@@ -1,0 +1,6 @@
+---
+project: test-jupyterhub
+gitrepo: git@github.com:nsidc/test-jupyterhub.git
+vsphere:
+  template:
+    default: focal64-nsidc-puppet6
