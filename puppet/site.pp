@@ -6,7 +6,7 @@ $project = hiera('project')
 unless $::environment == 'ci' {
 
   exec {'install TLJH':
-    command => '/vagrant/bootstrap.sh',
+    command => '/vagrant/bootstrap-tljh.sh',
     user    => 'vagrant',
   }
   # # Install and configure docker
