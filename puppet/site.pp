@@ -5,15 +5,19 @@ $project = hiera('project')
 
 unless $::environment == 'ci' {
 
-  # Install and configure docker
-  class {'docker':
-    version      => '5:20.10.14~3-0~ubuntu-focal',
-    docker_users => ['vagrant']
+  exec {'install TLJH':
+    command => '/vagrant/bootstrap.sh',
+    user    => 'vagrant',
   }
+  # # Install and configure docker
+  # class {'docker':
+  #   version      => '5:20.10.14~3-0~ubuntu-focal',
+  #   docker_users => ['vagrant']
+  # }
 
-  class {'docker::compose':
-    ensure => present,
-    version => '1.29.2',
-  }
+  # class {'docker::compose':
+  #   ensure => present,
+  #   version => '1.29.2',
+  # }
 
 }
